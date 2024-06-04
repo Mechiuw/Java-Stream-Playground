@@ -1,0 +1,14 @@
+1. **Sum of Squares of Even Numbers**:
+   - Given a list of integers, compute the sum of the squares of the even numbers.
+
+2. **Longest String by Length**:
+   - Given a list of strings, find the longest string.
+
+3. **Frequency of Words**:
+   - Given a list of words, count the frequency of each word and return a map of words to their frequencies.
+
+4. **Palindrome Strings**:
+   - Given a list of strings, find all strings that are palindromes.
+
+5. **Find the Second Largest Element**:
+   - Given a list of integers, find the second largest element in the list.

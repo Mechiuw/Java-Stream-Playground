@@ -1,6 +1,7 @@
 package playground;
 
 import java.util.*;
+import java.util.function.Predicate;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
@@ -125,12 +126,59 @@ public class Playground {
         System.out.println("\nsum: " + sum);
 
         //parallel processing (sum)
-
         int sums = numbers.parallelStream()
                 .reduce(0,Integer::sum);
         System.out.println("parallel-sum: " + sums);
 
+        //using reduce
         int z = numbers.stream().reduce(0,Integer::sum);
         System.out.println("z sum : " +z);
+
+        //using reduce #2 (find maximum)
+        int x = numbers.stream().reduce(0,Integer::max);
+        System.out.println("max of numbers: " + x);
+
+        //using reduce #3 (compare length)
+        Collection<String> example = Arrays.asList("great","good","better","okay","nice");
+        Optional<String> i = example.stream().reduce((word1,word2) -> word1.length() > word2.length() ? word1 : word2);
+        System.out.print("check : ");
+        i.ifPresent(System.out::print);
+
+        //using sorted (alphabetically)
+        List<String> sortedExample = example.stream().sorted().toList();
+        System.out.print("\nsorted example: ");
+        sortedExample.forEach(System.out::print);
+
+        //sorted by length
+        List<String> sortedInOrder = example.stream().sorted(Comparator.comparing(String::length)).toList();
+        System.out.print("\nsorted example by length: ");
+        sortedInOrder.forEach(System.out::print);
+
+        //sorted both
+        List<String> listedBoth = example.stream().sorted(Comparator.comparing(String::length).thenComparing(Comparator.naturalOrder())).toList();
+        System.out.print("\nsorted both:  ");
+        listedBoth.forEach(System.out::print);
+
+        //append characters
+        List<String> vowels = Arrays.asList("i","e","o","u","a");
+        List<String> xx = vowels.stream().sorted().toList();
+
+        StringBuilder built = xx.parallelStream().collect(StringBuilder::new,(ss,hh) -> ss.append(hh),(kk,ll) -> kk.append(",").append(ll));
+        StringBuilder builtByCorrection = vowels.parallelStream().collect(StringBuilder::new,(ss,hh) -> ss.append(hh),(kk,ll) -> kk.append(",").append(ll));
+
+        System.out.println("\nappended coma alphabetically : " + built);
+        System.out.println("appended coma natural/hard-code corrections : " + builtByCorrection);
+
+        //anyMatch returns boolean
+        String exs = "a";
+        boolean matchVowel = vowels.stream().anyMatch(n -> n.equals(exs));
+        String response = matchVowel ? "\"responded as found vowel\"" : "\"responded not found any\"";
+        System.out.println(response);
+
+        //count index or use count
+        String word = "dawdidonawadiawdawdwadwadowafhaf";
+        List<String> splittedWord = word.chars().mapToObj(e -> String.valueOf((char)e)).toList();
+        System.out.println("counted : " + splittedWord.size() + " [" + word + "] ");
+
     }
 }
