@@ -1,0 +1,17 @@
+
+1. **Merge Sorted Lists**:
+   - Given two sorted lists of integers, merge them into a single sorted list.
+
+2. **Word Length Counter**:
+   - Given a list of words, count the number of words of each length and return a map where the keys are word lengths and the values are the counts.
+
+3. **Prime Numbers**:
+   - Given a range of integers, find all prime numbers within that range.
+
+4. **Remove Duplicates**:
+   - Given a list of integers, remove duplicate elements and return a list with unique elements only.
+
+5. **Word Frequency Counter**:
+   - Given a list of words, count the frequency of each word and return a map where the keys are words and the values are their frequencies.
+
+Feel free to tackle these questions using Java Streams, and let me know if you need any further assistance or explanations!
