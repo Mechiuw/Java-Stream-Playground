@@ -2,6 +2,9 @@ package Livecodes;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -56,8 +59,9 @@ public class Livecode02 {
     }
 
     public static void five(){
-        String strings = "Alpha Beta Charlie Delta Echo Foxtrot Golf";
-        List<String> a = Stream.of(strings.split(" ")).toList();
-        System.out.print("5) frequency of [" + strings + "] : " + a.size());
+        String strings = "Foxtrot Charlie Beta Echo Charlie Alpha Beta Echo Delta Foxtrot Golf";
+        Map<String,Long> a = Stream.of(strings.split(" "))
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        System.out.println("5) frequency : \n" + a);
     }
 }

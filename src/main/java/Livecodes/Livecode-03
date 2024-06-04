@@ -1,0 +1,14 @@
+1. **Filter Even Numbers:**
+  - Given a list of integers, return a list containing only the even numbers.
+
+2. **Find Average Salary:**
+  - Given a list of employee objects with a salary property, return the average salary.
+
+3. **Group by Country:**
+  - Given a list of customer objects with a country property, group customers by country and return a map where keys are countries and values are lists of customers.
+
+4. **Sort by Last Name:**
+  - Given a list of student objects with first name and last name properties, sort the list by last name in ascending order.
+
+5. **Map to Uppercase:**
+  - Given a list of strings, return a new list where all strings are converted to uppercase.
