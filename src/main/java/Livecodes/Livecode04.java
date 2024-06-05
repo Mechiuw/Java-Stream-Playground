@@ -41,6 +41,13 @@ public class Livecode04 {
         System.out.println();
     }
 
+    public static void three(){
+        Optional<Date> dateMinTrx = branchList.stream().min(Comparator.comparing(Branch::getTotal_trx)).map(Branch::getPeriod);
+        System.out.print("3) date with the most minimum : ");
+        dateMinTrx.ifPresent(x -> System.out.print(x + " "));
+        System.out.println();
+    }
+
 
 
 
