@@ -48,6 +48,22 @@ public class Livecode04 {
         System.out.println();
     }
 
+    public static void four(){
+        Map<String,Integer> totalOmset =
+                branchList.stream().collect(Collectors
+                        .groupingBy(Branch::getOutlet,Collectors
+                                .summingInt(Branch::getOmset)));
+        Map<String,Integer> totalTrx =
+                branchList.stream().collect(Collectors
+                        .groupingBy(Branch::getOutlet, Collectors
+                                .summingInt(Branch::getTotal_trx)));
+
+        System.out.println("4a) total omset : ");
+        totalOmset.forEach((x, y) -> System.out.print(x + " : " + y + " || "));
+        System.out.println();
+        System.out.println("4a) total transactions : ");
+        totalTrx.forEach((x, y) -> System.out.print(x + " : " + y + " || "));
+    }
 
 
 
