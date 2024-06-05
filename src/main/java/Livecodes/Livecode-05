@@ -1,0 +1,14 @@
+
+1. Write a Java stream pipeline that takes a list of strings, filters out the strings that start with the letter 'A',
+and then sorts the remaining strings alphabetically.
+
+2. Implement a method using Java streams to find the average length of strings in a list of strings.
+
+3. Create a stream pipeline that takes a list of integers, squares each integer, removes duplicates,
+and then finds the maximum value.
+
+4. Write a method using Java streams to count the occurrences of each word in a list of strings,
+ ignoring case and punctuation.
+
+5. Implement a Java stream pipeline that takes a list of employee objects and returns
+a new list containing the names of employees whose salary is above a certain threshold, sorted alphabetically.
