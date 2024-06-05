@@ -65,6 +65,14 @@ public class Livecode04 {
         totalTrx.forEach((x, y) -> System.out.print(x + " : " + y + " || "));
     }
 
+    public static void five(){
+        int totalAllOmset = branchList.stream().mapToInt(Branch::getOmset).sum();
+        int totalAllTrx = branchList.stream().mapToInt(Branch::getTotal_trx).sum();
+
+        System.out.println();
+        System.out.println("5a) total all omsets : " + totalAllOmset);
+        System.out.print("5a) total all transactions : " + totalAllTrx);
+    }
 
 
 
