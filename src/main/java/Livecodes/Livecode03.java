@@ -49,9 +49,8 @@ public class Livecode03 {
         a.forEach((country,customers) -> { String customerNames = customers.stream()
                 .map(Customer::getName)
                 .collect(Collectors.joining(","));
-            System.out.println(country + " : " + customerNames + "\n");
+            System.out.println(country + " : " + customerNames );
         });
-        System.out.println();
     }
 
     public static void four(){

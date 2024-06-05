@@ -23,10 +23,10 @@ public class Livecode04 {
 
     public static void run() {
         one();
-//        two();
-//        three();
-//        four();
-//        five();
+        two();
+        three();
+        four();
+        five();
     }
     public static void one(){
         int minOmset = branchList.stream().mapToInt(Branch::getOmset).min().orElseThrow();
@@ -73,8 +73,6 @@ public class Livecode04 {
         System.out.println("5a) total all omsets : " + totalAllOmset);
         System.out.print("5a) total all transactions : " + totalAllTrx);
     }
-
-
 
 
     public static Date parseDate(String parseDate){

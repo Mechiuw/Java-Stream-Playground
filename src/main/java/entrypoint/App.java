@@ -7,11 +7,19 @@ import Livecodes.Livecode04;
 
 public class App {
     public static void main(String[] args) {
+        System.out.println("LIVECODE-01");
 //        Playground.run();
-//        Livecode01.run();
-//        Livecode02.run();
-//        Livecode03.run();
-//        Livecode04.run();
+        Livecode01.run();
+        System.out.println();
+        System.out.println("LIVECODE-02");
+        Livecode02.run();
+        System.out.println();
+        System.out.println("LIVECODE-03");
+        Livecode03.run();
+        System.out.println();
+        System.out.println();
+        System.out.println("LIVECODE-04");
+        Livecode04.run();
     }
 
 }
