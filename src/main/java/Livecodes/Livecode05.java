@@ -1,4 +1,6 @@
 package Livecodes;
+import entities.Employee;
+
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -9,6 +11,7 @@ public class Livecode05 {
         two();
         three();
         four();
+        five();
     }
 
     public static void one(){
@@ -31,7 +34,7 @@ public class Livecode05 {
         int[] max = integerList.stream()
                 .mapToInt(x -> x * x).distinct().max().stream().toArray();
         System.out.print("3) found : ");
-        Arrays.stream(max).forEach(x -> System.out.print(x));
+        Arrays.stream(max).forEach(System.out::print);
         System.out.println();
     }
 
@@ -39,8 +42,23 @@ public class Livecode05 {
         List<String> stringList = Arrays.asList("Ayam","Sapi","Anjing","Domba","Babi","Ayam","Domba");
         Map<String,Long> map = stringList.stream()
                 .collect(Collectors.groupingBy(x -> x,Collectors.counting()));
-        System.out.println();
+        System.out.print("4) mapped : ");
         map.forEach((x,y) -> System.out.print(x + " - " + y + " || "));
+        System.out.println();
+    }
+
+    public static void five(){
+        List<Employee> employees = Arrays.asList(
+                new Employee("randy",2000),
+                new Employee("roland",4000),
+                new Employee("bruce",3000),
+                new Employee("joseph",2500));
+
+        Integer threshold = 2800;
+        List<Employee> filteredEmployees = employees.stream().filter(x -> x.getSalary() > threshold)
+                .sorted(Comparator.comparingInt(Employee::getSalary)).toList();
+        System.out.print("5) filtered employees salary above " + threshold + " : ");
+        filteredEmployees.stream().map(Employee::getName).forEach(x -> System.out.print(x + ", "));
     }
 
 

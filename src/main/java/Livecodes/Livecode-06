@@ -1,0 +1,14 @@
+1. **Filter and Collect:**
+   - Given a list of strings, filter out the strings that contain the letter "e" and collect the remaining strings into a new list.
+
+2. **Find First:**
+   - Given a list of strings, find the first string that has a length greater than 5 characters using stream operations.
+
+3. **Count Elements:**
+   - Given a list of strings, count how many strings start with the letter "A" using stream operations.
+
+4. **Map to Upper Case:**
+   - Given a list of strings, convert all the strings to uppercase and collect them into a new list.
+
+5. **Sort by Length:**
+   - Given a list of strings, sort the strings by their length in ascending order using stream operations.
