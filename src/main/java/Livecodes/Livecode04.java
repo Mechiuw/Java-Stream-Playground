@@ -34,6 +34,14 @@ public class Livecode04 {
         System.out.println("1a) minimum omset : " + minOmset );
         System.out.println("1b) maximum omset : " + maxOmset );
     }
+    public static void two(){
+        IntStream lessThanSix = branchList.stream().mapToInt(Branch::getOmset).filter(x -> x < 600);
+        System.out.print("2) omset less than 600 : ");
+        lessThanSix.forEach(x -> System.out.print(x + " "));
+        System.out.println();
+    }
+
+
 
 
 
